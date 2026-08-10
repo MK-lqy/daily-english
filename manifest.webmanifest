@@ -1,0 +1,11 @@
+{
+  "name": "Daily English 每日口语",
+  "short_name": "每日口语",
+  "description": "带音标和复习计划的英语日常对话学习应用。",
+  "lang": "zh-CN",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f4f7ff",
+  "theme_color": "#3761e9",
+  "icons": [{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
