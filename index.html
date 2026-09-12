@@ -32,6 +32,63 @@ const lessons=[
 {name:'天气',sub:'轻松聊天',emoji:'☀️',title:'聊聊天气',tip:'天气是最安全、最常见的英语开场话题。',lines:[['You','🙂','It is a beautiful day.','/ɪt ɪz ə ˈbjuːtɪfəl deɪ/','今天天气真好。'],['Friend','🧑','Yes, it is warm and sunny.','/jes, ɪt ɪz wɔːm ænd ˈsʌni/','是啊，温暖又晴朗。'],['You','🙂','I like this weather.','/aɪ laɪk ðɪs ˈweðər/','我喜欢这样的天气。'],['Friend','🧑','Me too.','/miː tuː/','我也是。']]},
 {name:'电话',sub:'简单通话',emoji:'📱',title:'打电话',tip:'接电话时，先说自己的名字，会显得清楚又礼貌。',lines:[['You','🙂','Hello, this is Amy speaking.','/həˈləʊ, ðɪs ɪz ˈeɪmi ˈspiːkɪŋ/','你好，我是艾米。'],['Friend','🧑','Hi Amy, this is Ben.','/haɪ ˈeɪmi, ðɪs ɪz ben/','嗨艾米，我是本。'],['You','🙂','How are you today?','/haʊ ɑːr juː təˈdeɪ/','你今天怎么样？'],['Friend','🧑','I am doing well, thanks.','/aɪ æm ˈduːɪŋ wel, θæŋks/','我很好，谢谢。']]}
 ];
+/* 1,000-sentence daily conversation library: the original 8 lessons (32 lines)
+   plus 242 practical mini-scenes (968 lines). */
+const library=[
+ ['咖啡店','点饮品','☕','咖啡|咖啡,拿铁|拿铁,美式咖啡|美式咖啡,卡布奇诺|卡布奇诺,热巧克力|热巧克力,绿茶|绿茶,冰茶|冰茶,橙汁|橙汁,矿泉水|矿泉水,一杯牛奶|一杯牛奶,一杯柠檬水|一杯柠檬水'],
+ ['餐厅','点餐','🍜','牛肉面|牛肉面,鸡肉沙拉|鸡肉沙拉,番茄汤|番茄汤,炒饭|炒饭,意大利面|意大利面,三明治|三明治,汉堡|汉堡,披萨|披萨,鱼和薯条|炸鱼薯条,素食套餐|素食餐,今日特餐|今日特餐'],
+ ['商店','购物','🛍️','一件T恤|一件T恤,一双鞋|一双鞋,一把雨伞|一把雨伞,一个背包|一个背包,一顶帽子|一顶帽子,一条裙子|一条裙子,一件夹克|一件夹克,一副太阳镜|一副太阳镜,一块手表|一块手表,一条围巾|一条围巾,一份礼物|一份礼物'],
+ ['问路','寻找地点','🗺️','车站|车站,银行|银行,药店|药店,图书馆|图书馆,超市|超市,邮局|邮局,博物馆|博物馆,医院|医院,公园|公园,洗手间|洗手间,出租车站|出租车站'],
+ ['交通','乘车出行','🚌','机场|机场,市中心|市中心,火车站|火车站,酒店|酒店,大学|大学,购物中心|购物中心,海边|海边,动物园|动物园,办公室|办公室,朋友家|朋友家,会议中心|会议中心'],
+ ['酒店','入住酒店','🏨','一间单人房|一间单人房,一间双人房|一间双人房,一间安静的房间|一间安静的房间,一间带窗的房间|一间有窗的房间,一张额外的毛巾|一条额外毛巾,一张房卡|一张房卡,叫醒服务|叫醒服务,无线网络密码|无线网密码,早餐信息|早餐信息,行李帮助|行李帮助,延迟退房|延迟退房'],
+ ['旅行','出行服务','✈️','登机牌|登机牌,护照|护照,行李标签|行李标签,旅行地图|旅行地图,租车|租车,旅游信息|旅游信息,换汇服务|换汇服务,一张城市通票|一张城市通票,一张火车票|一张火车票,一个导游|一位导游,旅行保险|旅行保险'],
+ ['学校','学习生活','🎒','英语作业|英语作业,数学作业|数学作业,一本词典|一本词典,一支铅笔|一支铅笔,一张练习纸|一张练习纸,课堂笔记|课堂笔记,一个学习小组|一个学习小组,老师的帮助|老师的帮助,图书馆卡|图书证,一个安静座位|一个安静座位,考试时间|考试时间'],
+ ['工作','办公室沟通','💼','一份报告|一份报告,会议资料|会议材料,打印机帮助|打印机帮助,一个文件夹|一个文件夹,项目更新|项目更新,客户电话|客户电话,一封电子邮件|一封邮件,午餐时间|午餐时间,电脑帮助|电脑帮助,会议室|会议室,同事的意见|同事的建议'],
+ ['健康','看医生','🩺','头痛|头痛,咳嗽|咳嗽,发烧|发烧,胃痛|胃痛,过敏|过敏,牙痛|牙痛,一次检查|一次检查,一个预约|一个预约,一些药|一些药,医生的建议|医生的建议,一张病假条|病假条'],
+ ['运动','健身锻炼','🏃','瑜伽课|瑜伽课,游泳课|游泳课,跑步机|跑步机,健身房会员|健身房会员,一位教练|一位教练,拉伸练习|拉伸练习,舞蹈课|舞蹈课,篮球场|篮球场,羽毛球场|羽毛球场,一节自行车课|一节动感单车课,一个储物柜|一个储物柜'],
+ ['家里','日常家务','🏠','洗衣服|洗衣服,做晚饭|做晚饭,打扫房间|打扫房间,倒垃圾|倒垃圾,洗碗|洗碗,浇花|浇花,整理桌子|整理桌子,修理灯|修理灯,买杂货|买日用品,换床单|换床单,锁门|锁门'],
+ ['朋友','相约活动','🤝','喝咖啡|喝咖啡,看电影|看电影,吃晚饭|吃晚饭,去散步|去散步,逛商店|逛街,参观博物馆|参观博物馆,一起学习|一起学习,去公园|去公园,玩游戏|玩游戏,参加聚会|参加聚会,周末旅行|周末旅行'],
+ ['电话','电话沟通','📱','打给妈妈|给妈妈打电话,打给朋友|给朋友打电话,留语音留言|留语音,回一个电话|回电话,确认时间|确认时间,分享地址|分享地址,询问消息|问消息,预约|预约,取消计划|取消计划,说声谢谢|表达感谢,再见|道别'],
+ ['科技','设备帮助','💻','无线网络|无线网络,手机充电器|手机充电器,电脑密码|电脑密码,一个应用程序|一个应用,打印机|打印机,蓝牙耳机|蓝牙耳机,视频通话|视频电话,我的屏幕|我的屏幕,一份文件|一个文件,照片备份|照片备份,软件更新|软件更新'],
+ ['银行','金融服务','🏦','开一个账户|开账户,取一些现金|取现金,存钱|存钱,换一些钱|换钱,一张新卡|一张新卡,查看余额|查看余额,转账|转账,支付账单|付账单,一份对账单|一份账单明细,重设密码|重设密码,银行营业时间|银行营业时间'],
+ ['邮局','寄送包裹','📮','寄一封信|寄信,寄一个包裹|寄包裹,买邮票|买邮票,快递服务|快递服务,一个追踪号码|一个追踪号,国际邮寄|国际邮寄,一个信封|一个信封,包装帮助|包装帮助,包裹尺寸|包裹尺寸,邮费信息|邮费信息,领取一个包裹|领取包裹'],
+ ['天气','天气聊天','☀️','晴天|晴天,下雨天|雨天,大风天|大风天,寒冷的早晨|寒冷的早晨,炎热的下午|炎热的下午,阴天|阴天,雪天|雪天,凉爽的夜晚|凉爽的夜晚,潮湿的天气|潮湿天气,明天的天气|明天天气,周末天气|周末天气'],
+ ['活动','休闲安排','🎭','一场音乐会|音乐会,一部电影|电影,一场比赛|一场比赛,一次展览|展览,一个节日|节日,一个市场|市集,一场演出|演出,一本新书|一本新书,一个烹饪班|烹饪课,一次城市游览|城市观光,一个讲座|讲座'],
+ ['宠物','照顾宠物','🐾','狗粮|狗粮,猫粮|猫粮,一次散步|散步,一个宠物医生|宠物医生,一件玩具|玩具,一次洗澡|洗澡,一个宠物笼|宠物笼,一个项圈|项圈,一份宠物预约|宠物预约,宠物看护|宠物照看,训练建议|训练建议'],
+ ['邻里','社区生活','🏘️','附近的商店|附近商店,一个好餐厅|一家好餐厅,一个安静的公园|安静的公园,一个理发店|理发店,一家药店|药店,一个洗衣店|洗衣店,一个公交站|公交站,一个修理店|维修店,一个咖啡馆|咖啡馆,一个游泳池|游泳池,社区活动|社区活动'],
+ ['紧急情况','寻求帮助','🆘','帮助|帮助,一位警察|一位警察,一位医生|一位医生,一辆出租车|一辆出租车,我的钱包|我的钱包,我的手机|我的手机,一个安全的地方|安全的地方,急救箱|急救箱,紧急出口|紧急出口,联系我的家人|联系家人,报警电话|紧急电话号码']
+];
+const sounds='点击英文单词，单独听发音';
+function extraLesson(group,item,n){
+ const [name,sub,emoji]=group, [en,zh]=item.split('|'), A=['You','🙂'],B=['Helper','🧑'];
+ const hint='每一句都可点单词单独听，再用回忆模式自己说出来。';
+ const sets={
+  '咖啡店':[[`I would like ${en}, please.`,`我想要${zh}，谢谢。`],[`Sure. Would you like it hot or iced?`,'好的。您想要热的还是冰的？'],['Iced, please. How much is it?','冰的，谢谢。多少钱？'],['It will be ready in a moment.','马上就好。']],
+  '餐厅':[[`I would like ${en}, please.`,`我想要${zh}，谢谢。`],['Certainly. Would you like anything to drink?','当然。您想喝点什么吗？'],['Just water, please.','只要水，谢谢。'],[`Your ${en} will be ready soon.`,`您的${zh}很快就好。`]],
+  '商店':[[`Do you have ${en}?`,`你们有${zh}吗？`],['Yes, we have it in stock.','有的，我们有货。'],['Can I try it or look at it?','我可以试试或看看吗？'],[`Of course. Here is ${en}.`,`当然可以。这是${zh}。`]],
+  '问路':[[`Excuse me, where is the ${en}?`,`打扰一下，${zh}在哪里？`],[`Go straight. It is near here.`,'一直走。就在这附近。'],['Is it far from here?','离这里远吗？'],['No, it is only a few minutes away.','不远，只要几分钟。']],
+  '交通':[[`How can I get to the ${en}?`,`我怎么去${zh}？`],['You can take the bus or the subway.','您可以坐公交或地铁。'],['Which stop should I get off at?','我应该在哪一站下车？'],[`Get off at the next stop for the ${en}.`,`下一站下车就到${zh}。`]],
+  '酒店':[[`Could I have ${en}?`,`我可以要${zh}吗？`],['Certainly. I can help you with that.','当然，我可以帮您。'],['Thank you. When can I get it?','谢谢。我什么时候可以拿到？'],['I will arrange it right away.','我马上为您安排。']],
+  '旅行':[[`Where can I get ${en}?`,`我在哪里可以拿到${zh}？`],['Please go to the travel desk.','请去旅行服务台。'],['Is it open now?','现在开着吗？'],['Yes, it is open until six.','是的，营业到六点。']],
+  '学校':[[`I need help with ${en}.`,`我需要${zh}方面的帮助。`],['Sure. Let us look at it together.','好的。我们一起看看。'],['Thank you. I want to learn more.','谢谢。我想多学一点。'],['You are doing a great job.','你做得很好。']],
+  '工作':[[`Can you help me with ${en}?`,`你能帮我处理${zh}吗？`],['Yes. Let us discuss it now.','可以。我们现在讨论一下。'],['When do you need it?','你什么时候需要？'],['Please send it to me this afternoon.','请今天下午发给我。']],
+  '健康':[[`I need help with ${en}.`,`我需要处理${zh}。`],['I understand. Please tell me more.','我明白。请再多说一点。'],['What should I do now?','我现在该怎么办？'],['Please rest and follow the doctor’s advice.','请休息并遵从医生建议。']],
+  '运动':[[`I would like to try ${en}.`,`我想试试${zh}。`],['Great choice. It starts at five.','很好的选择。五点开始。'],['Do I need to bring anything?','我需要带什么吗？'],['Please bring water and comfortable shoes.','请带水和舒适的鞋。']],
+  '家里':[[`I need to ${en}.`,`我需要${zh}。`],['Would you like some help?','你需要帮忙吗？'],['Yes, please. Thank you.','需要，谢谢。'],['No problem. We can do it together.','没问题。我们可以一起做。']],
+  '朋友':[[`Would you like to ${en}?`,`你想一起${zh}吗？`],['That sounds great. What time?','听起来不错。几点？'],['How about three o’clock?','三点怎么样？'],['Perfect. See you then.','太好了。到时见。']],
+  '电话':[[`I am calling to ${en}.`,`我打电话是想${zh}。`],['Thanks for calling. How can I help?','谢谢来电。我可以怎么帮您？'],['That is all for now.','目前就这些。'],['Have a nice day. Goodbye.','祝您愉快。再见。']],
+  '科技':[[`I need help with ${en}.`,`我需要${zh}方面的帮助。`],['Let me check it for you.','让我为您检查一下。'],['Thank you. Is it easy to fix?','谢谢。容易修好吗？'],['Yes, we can fix it quickly.','是的，我们能很快解决。']],
+  '银行':[[`I would like to ${en}.`,`我想${zh}。`],['Please show me your ID, please.','请出示您的身份证件。'],['Here it is. Thank you.','给您，谢谢。'],['You are welcome. It is all set.','不客气。已经办好了。']],
+  '邮局':[[`I need to ${en}.`,`我需要${zh}。`],['Certainly. Please put it here.','当然。请放在这里。'],['How much will it cost?','需要多少钱？'],['I will check the price for you.','我来为您查一下价格。']],
+  '天气':[[`What do you think about ${en}?`,`你觉得${zh}怎么样？`],['It looks nice today.','今天看起来不错。'],['Should I bring an umbrella?','我应该带伞吗？'],['It is a good idea, just in case.','带上比较好，以防万一。']],
+  '活动':[[`Would you like to go to ${en}?`,`你想去${zh}吗？`],['Yes, I would love to.','好啊，我很想去。'],['When does it start?','什么时候开始？'],['It starts at seven this evening.','今晚七点开始。']],
+  '宠物':[[`My pet needs ${en}.`,`我的宠物需要${zh}。`],['I can help you with that.','我可以帮您。'],['What do you recommend?','您推荐什么？'],['Let us choose the best option together.','我们一起选最合适的。']],
+  '邻里':[[`Do you know where I can find ${en}?`,`你知道哪里能找到${zh}吗？`],['Yes, there is one around the corner.','知道，拐角处就有一个。'],['Is it open today?','今天开门吗？'],['Yes, it is open until eight.','是的，营业到八点。']],
+  '紧急情况':[[`I need ${en}, please.`,`我需要${zh}，拜托。`],['Stay calm. I am here to help.','保持冷静。我在这里帮您。'],['What should I do?','我该怎么办？'],['Please stay here and wait for help.','请留在这里等待帮助。']]
+ };
+ return {name,sub,emoji,title:`${name} · ${zh}`,tip:hint,lines:sets[name].map((line,i)=>[...(i%2?B:A),line[0],sounds,line[1]])};
+}
+library.flatMap(g=>g[3].split(',').map((v,i)=>extraLesson(g,v,i))).slice(0,242).forEach(x=>lessons.push(x));
 const courseStart=localStorage.getItem('dailyEnglishCourseStart')||new Date().toISOString().slice(0,10);localStorage.setItem('dailyEnglishCourseStart',courseStart);
 const courseDay=()=>Math.max(1,Math.floor((new Date().setHours(0,0,0,0)-new Date(courseStart).getTime())/86400000)+1);
 const dailyLesson=()=>((courseDay()-1)%lessons.length);
