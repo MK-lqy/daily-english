@@ -9,7 +9,7 @@
   <title>Daily English · 每日口语</title>
   <style>
     :root{--ink:#17223b;--muted:#6d7890;--paper:#fffdf8;--blue:#3761e9;--mint:#dff8ec;--line:#e8eaf1;--warm:#ffca6a}*{box-sizing:border-box}body{margin:0;background:#f4f7ff;color:var(--ink);font-family:"Microsoft YaHei",system-ui,sans-serif}.app{max-width:960px;margin:auto;min-height:100vh;padding:28px 22px 42px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:26px}.brand{font-size:20px;font-weight:800;letter-spacing:-.4px}.brand span{color:var(--blue)}.streak{background:#fff;border-radius:99px;padding:9px 13px;font-size:13px;box-shadow:0 5px 18px #223c8512}.hero{background:linear-gradient(120deg,#3761e9,#6785f6);border-radius:27px;padding:29px 32px;color:#fff;position:relative;overflow:hidden}.hero:after{content:"Aa";position:absolute;right:28px;bottom:-35px;font-family:Georgia;font-size:170px;font-style:italic;color:#fff2}.eyebrow{font-size:13px;opacity:.78}.hero h1{font-size:clamp(26px,5vw,39px);margin:8px 0;letter-spacing:-1.5px}.hero p{margin:0;opacity:.88}.progress{width:210px;height:8px;background:#ffffff3b;border-radius:9px;margin-top:21px}.progress i{display:block;width:46%;height:100%;background:var(--warm);border-radius:9px}.section-title{display:flex;align-items:end;justify-content:space-between;margin:31px 0 14px}.section-title h2{margin:0;font-size:20px}.section-title button,.translate{border:0;background:none;color:var(--blue);font-weight:700;cursor:pointer}.scenes{display:flex;gap:11px;overflow:auto;padding:2px 1px 8px}.scene{min-width:150px;background:#fff;border:2px solid transparent;padding:16px;border-radius:17px;cursor:pointer;text-align:left;color:var(--ink);box-shadow:0 5px 16px #1c35600a}.scene.active{border-color:var(--blue);background:#eff3ff}.scene .emoji{font-size:25px;display:block;margin-bottom:9px}.scene b{display:block;font-size:15px}.scene small{color:var(--muted);font-size:12px}.review{background:#fff;border-radius:20px;padding:17px 19px;margin:22px 0 5px;border:1px solid #e8eaf1;display:flex;justify-content:space-between;gap:15px;align-items:center}.review b{display:block}.review p{margin:5px 0 0;color:var(--muted);font-size:13px}.review button,.done{border:0;border-radius:12px;background:var(--blue);color:#fff;padding:10px 13px;font-weight:800;cursor:pointer;white-space:nowrap}.dialogue{background:var(--paper);border-radius:24px;padding:23px;margin-top:4px;box-shadow:0 9px 26px #1c35600c}.dialogue-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:16px}.dialogue-head b{font-size:18px}.play-all{border:0;border-radius:12px;background:var(--mint);color:#18774c;padding:10px 13px;font-weight:800;cursor:pointer}.line{display:grid;grid-template-columns:42px 1fr 36px;gap:11px;align-items:center;padding:18px 0;border-bottom:1px solid var(--line)}.line:last-child{border:0}.avatar{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:#fff0cf;font-size:20px}.line:nth-of-type(even) .avatar{background:#e4eaff}.speaker{font-size:12px;color:var(--muted);font-weight:800}.english{font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:20px;margin:3px 0 5px}.word{font:inherit;color:inherit;border:0;background:transparent;padding:1px 2px;border-radius:5px;cursor:pointer}.word:hover,.word:focus,.word.playing{color:#204dcc;background:#dfe8ff;outline:0}.phonetic{color:#3863bc;font-family:Georgia,serif;font-size:15px;letter-spacing:.2px}.chinese{font-size:13px;color:var(--muted);margin-top:5px}.hidden{display:none}.speak{border:0;background:#f0f3f9;border-radius:10px;width:35px;height:35px;font-size:16px;cursor:pointer}.tip{display:flex;gap:12px;background:#fff2d7;border-radius:16px;padding:15px 17px;margin-top:18px;font-size:14px;line-height:1.6}.tip strong{color:#a66400}.done{display:block;width:100%;margin-top:16px;background:#17223b}.done.finished{background:#2aa369}.bottom{position:sticky;bottom:12px;margin:25px auto 0;width:max-content;max-width:100%;background:#17223b;color:#fff;border-radius:15px;padding:11px 18px;font-size:13px;box-shadow:0 7px 21px #17223b33}@media(max-width:550px){.app{padding:18px 14px}.hero{padding:25px 22px}.hero:after{right:8px}.dialogue{padding:17px}.english{font-size:18px}.line{grid-template-columns:38px 1fr 34px;gap:8px}}
-    .recall .english,.recall .phonetic{filter:blur(7px);user-select:none}.recall .english{cursor:pointer}.recall .chinese{font-size:15px;color:var(--ink);font-weight:700}
+    .recall .english,.recall .phonetic{filter:blur(7px);user-select:none}.recall .english{cursor:pointer}.recall .chinese{font-size:15px;color:var(--ink);font-weight:700}.lesson-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:8px 0 22px}.lesson-card{border:1px solid var(--line);background:#fff;border-radius:15px;padding:13px;text-align:left;cursor:pointer;color:var(--ink);min-height:98px}.lesson-card:hover,.lesson-card.active{border-color:var(--blue);background:#eff3ff}.lesson-card .num{font-size:11px;color:var(--blue);font-weight:800}.lesson-card b{display:block;font-size:14px;margin:7px 0 4px}.lesson-card small{display:block;color:var(--muted);font-size:12px}.catalog-note{font-size:13px;color:var(--muted);margin:-3px 0 13px}
   </style>
 </head>
 <body><main class="app">
@@ -17,6 +17,7 @@
   <section class="hero"><div class="eyebrow" id="dayLabel">DAY 1 · TODAY'S MINI LESSON</div><h1 id="heroTitle">用英语，自信开口。</h1><p id="heroText">今天先记住 30%，再用回忆练习巩固 70%。</p><div class="progress"><i></i></div></section>
   <div class="section-title"><h2>选择一个场景</h2><button id="translation">隐藏中文</button></div>
   <nav class="scenes" id="scenes"></nav>
+  <div class="lesson-grid" id="lessonGrid"></div>
   <section class="review" id="reviewCard"></section>
   <section class="dialogue"><div class="dialogue-head"><div><b id="dialogueTitle">认识新朋友</b><div class="speaker" id="modeHint">记忆模式 · 看英文、听发音</div></div><button class="play-all" id="modeBtn">进入回忆练习</button></div><div id="lines"></div><div class="tip"><span>💡</span><div><strong id="tipTitle">30% 记忆输入</strong><br><span id="tip">先听一遍，再按暂停逐句模仿。不要害怕说错！</span></div></div><button class="done" id="doneBtn">✓ 我学完了，明天复习</button></section>
   <div class="bottom">今日已练习 2 / 5 句 · 继续加油 ✨</div>
@@ -59,8 +60,15 @@ const library=[
  ['紧急情况','寻求帮助','🆘','帮助|帮助,一位警察|一位警察,一位医生|一位医生,一辆出租车|一辆出租车,我的钱包|我的钱包,我的手机|我的手机,一个安全的地方|安全的地方,急救箱|急救箱,紧急出口|紧急出口,联系我的家人|联系家人,报警电话|紧急电话号码']
 ];
 const sounds='点击英文单词，单独听发音';
+const englishTopic={
+ '咖啡店':'a drink','餐厅':'a meal','商店':'this item','问路':'this place','交通':'this destination',
+ '酒店':'this service','旅行':'this travel service','学校':'this subject','工作':'this task','健康':'this problem',
+ '运动':'this class','家里':'do this chore','朋友':'do something fun','电话':'talk with you','科技':'this device',
+ '银行':'use this service','邮局':'send this package','天气':'the weather','活动':'this event','宠物':'some care',
+ '邻里':'this place','紧急情况':'help'
+};
 function extraLesson(group,item,n){
- const [name,sub,emoji]=group, [en,zh]=item.split('|'), A=['You','🙂'],B=['Helper','🧑'];
+ const [name,sub,emoji]=group, [,zh]=item.split('|'), en=englishTopic[name], A=['You','🙂'],B=['Helper','🧑'];
  const hint='每一句都可点单词单独听，再用回忆模式自己说出来。';
  const sets={
   '咖啡店':[[`I would like ${en}, please.`,`我想要${zh}，谢谢。`],[`Sure. Would you like it hot or iced?`,'好的。您想要热的还是冰的？'],['Iced, please. How much is it?','冰的，谢谢。多少钱？'],['It will be ready in a moment.','马上就好。']],
@@ -106,5 +114,41 @@ function sayWord(button,word){if(!word)return;document.querySelectorAll('.word.p
 function startReview(){const h=history();const record=h.find(x=>x.reviewDate<=today()&&!x.reviewed);if(!record)return;current=record.lesson;record.reviewed=true;localStorage.setItem('dailyEnglishHistory',JSON.stringify(h));render();window.scrollTo({top:document.querySelector('.dialogue').offsetTop-12,behavior:'smooth'})}
 $('#translation').onclick=()=>{showChinese=!showChinese;render()};$('#modeBtn').onclick=()=>{recallMode=!recallMode;render()};
 $('#doneBtn').onclick=()=>{let h=history();if(!h.some(x=>x.lesson===current&&x.doneDate===today())){let d=new Date();d.setDate(d.getDate()+1);h.push({lesson:current,doneDate:today(),reviewDate:d.toISOString().slice(0,10),reviewed:false});localStorage.setItem('dailyEnglishHistory',JSON.stringify(h))}render()};
+
+// Open course library: every scene is available immediately, grouped by topic.
+const firstLessonCategories={
+ '认识朋友':'生活','咖啡店':'生活','问路':'出行','买东西':'购物','餐厅':'生活','时间':'生活','天气':'生活','电话':'生活'
+};
+lessons.forEach(lesson=>lesson.category=lesson.category||firstLessonCategories[lesson.name]||lesson.name);
+const categories=['全部','生活','购物','出行',...library.map(group=>group[0]).filter(name=>!['咖啡店','餐厅','问路','商店','交通','旅行','天气','电话','邻里'].includes(name))];
+let selectedCategory='全部';
+current=0;
+function categoryFor(lesson){
+ if(['咖啡店','餐厅','天气','电话','邻里'].includes(lesson.category))return '生活';
+ if(['商店','银行','邮局'].includes(lesson.category))return '购物';
+ if(['问路','交通','酒店','旅行'].includes(lesson.category))return '出行';
+ return lesson.category;
+}
+function chooseCategory(category){selectedCategory=category;const next=lessons.findIndex(lesson=>category==='全部'||categoryFor(lesson)===category);if(next>=0)current=next;recallMode=false;render()}
+function openLesson(index){current=index;recallMode=false;render();window.scrollTo({top:document.querySelector('.dialogue').offsetTop-12,behavior:'smooth'})}
+function render(){
+ const L=lessons[current],lineTotal=lessons.reduce((total,lesson)=>total+lesson.lines.length,0);
+ const visible=lessons.map((lesson,index)=>({lesson,index})).filter(({lesson})=>selectedCategory==='全部'||categoryFor(lesson)===selectedCategory);
+ $('#dayLabel').textContent=`课程库 · ${lessons.length} 个场景 · ${lineTotal.toLocaleString()} 句`;
+ $('#heroTitle').textContent='想学哪个，就学哪个。';
+ $('#heroText').textContent='不再每日解锁。选择分类和场景，随时开始；学完后仍会在明天提醒复习。';
+ $('#scenes').innerHTML=categories.map(category=>`<button class="scene ${category===selectedCategory?'active':''}" onclick="chooseCategory('${category}')"><b>${category}</b><small>${category==='全部'?`${lessons.length} 个场景`:`${lessons.filter(lesson=>categoryFor(lesson)===category).length} 个场景`}</small></button>`).join('');
+ $('#lessonGrid').innerHTML=visible.map(({lesson,index})=>`<button class="lesson-card ${index===current?'active':''}" onclick="openLesson(${index})"><span class="num">场景 ${index+1}</span><b>${lesson.emoji||'💬'} ${lesson.title}</b><small>4 句实用对话</small></button>`).join('');
+ $('#dialogueTitle').textContent=`${L.category||'生活'} · ${L.title}`;
+ $('#tip').textContent=recallMode?'只看中文，先在心里或大声说出英文；想不起来时，点击模糊的英文查看。':L.tip;
+ $('#tipTitle').textContent=recallMode?'70% 回忆输出':'30% 记忆输入';
+ $('#modeHint').textContent=recallMode?'回忆模式 · 看中文，说英文':'记忆模式 · 看英文、听发音';
+ $('#modeBtn').textContent=recallMode?'回到记忆模式':'进入 70% 回忆练习';
+ $('#lines').innerHTML=L.lines.map((x,i)=>`<article class="line ${recallMode?'recall':''}"><div class="avatar">${x[1]}</div><div><div class="speaker">${x[0]}</div><div class="english" onclick="this.closest('.line').classList.remove('recall')">${words(x[2])}</div><div class="phonetic">${x[3]}</div><div class="chinese ${showChinese?'':'hidden'}">${x[4]}</div></div><button class="speak" aria-label="朗读" onclick="say(${i})">🔊</button></article>`).join('');
+ $('#translation').textContent=showChinese?'隐藏中文':'显示中文';
+ const completed=history().some(x=>x.lesson===current&&x.doneDate===today());
+ $('#doneBtn').textContent=completed?'✓ 今天已完成，明天见！':'✓ 学完此场景，明天复习';
+ $('#doneBtn').className='done '+(completed?'finished':'');renderReview();
+}
 if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js');render();
 </script></body></html>
